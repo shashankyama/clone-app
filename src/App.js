@@ -4,8 +4,7 @@ import SignIn from "./Login/login";
 
 function App() {
   return (
-    <div className="App">
-      <SignUp />
+    <div className="Container">
       <SignIn />
     </div>
   );

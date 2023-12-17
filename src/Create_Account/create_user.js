@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../firebase";
+import "../index.css";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -18,22 +19,32 @@ const SignUp = () => {
   };
 
   return (
-    <div className="sign-in-container">
-      <form onSubmit={signUp}>
-        <h1>Create Account</h1>
-        <input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
-        <input
-          type="password"
-          placeholder="Enter your password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <button type="submit">Sign Up</button>
+    <div className="container">
+      <h2 align="center">Create Account</h2>
+      <form className="form" onSubmit={signUp}>
+        <div className="form-control">
+          <label htmlFor="email">Mail : </label>
+          <input
+            type="email"
+            id="email_id"
+            name="email_id"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="form-control">
+          <label htmlFor="password">Password : </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div align="center">
+          <button align="center" type="submit" className="btn">
+            Create Account
+          </button>
+        </div>
       </form>
     </div>
   );
