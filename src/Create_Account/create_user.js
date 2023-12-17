@@ -23,7 +23,7 @@ const SignUp = () => {
       <h2 align="center">Create Account</h2>
       <form className="form" onSubmit={signUp}>
         <div className="form-control">
-          <label htmlFor="email">Mail : </label>
+          <label>Mail : </label>
           <input
             type="email"
             id="email_id"
@@ -32,7 +32,7 @@ const SignUp = () => {
           />
         </div>
         <div className="form-control">
-          <label htmlFor="password">Password : </label>
+          <label>Password : </label>
           <input
             type="password"
             id="password"

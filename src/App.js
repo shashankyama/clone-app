@@ -5,7 +5,7 @@ import SignIn from "./Login/login";
 function App() {
   return (
     <div className="Container">
-      <SignIn />
+      <SignUp />
     </div>
   );
 }
